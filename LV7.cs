@@ -48,7 +48,7 @@ namespace Baze_LV7_predlozak
             string datum = txtDatum.Value.ToString("yyyy-MM-dd");
             string spol;
             if (rbM.Checked) spol = "M";
-            else spol = "Ž";
+            else spol = "Å½";
             String statement = "INSERT INTO osobe VALUES ('" + txtOIB.Text + "','" + txtIme.Text + "','" + txtPrezime.Text + "','" + spol + "','" + datum + "')";
 
             SqlDataAdapter dataAdapter = new SqlDataAdapter(statement, conn);
