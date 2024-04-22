@@ -1,13 +1,13 @@
-1. Kreirati korisnièku funkciju (user function), spremljenu proceduru (stored procedure) i okidaè (trigger) koji æe uzimati karakterni parametar i okretati ga 
+1. Kreirati korisniÄku funkciju (user function), spremljenu proceduru (stored procedure) i okidaÄ (trigger) koji Ä‡e uzimati karakterni parametar i okretati ga 
 naopako, npr.:
 ulazni parametar: "ivan" -> izlazni parametar: "navi".
-Ukoliko je primljeni podatak palindrom (rijeè koja se èita isto unazad kao i od naprijed, npr. „Ana“, „kapak“ itd.) - ispiše se tekst „palindrom“. Ukoliko je 
-unesena rijeèa dua od 30 znakova – ispiše se tekst „Ulazna rijeè je predugaèka, maksimalan broj znakova je 30“.
-Cilj zadatka je pokazati na istom primjeru razlike/sliènosti izmeğu funkcije i procedure, te pokazati upotrebu triggera.
-Objekte definirati na slijedeæi naèin:
-- funkcija prima karakterni podatak i vraæa opisan izlaz
-- procedura prima karakterni podatak i ispisuje opisan izlaz (ne vraæa vrijednost)
-- trigger se definira tako da se izvrši umjesto insert naredbe na tablici raèuni - naopako upiše ime kupca pri izvršavanju insert naredbe na tablicu (ne provjerava se duina rijeèi niti da li je rijeè palindrom).
+Ukoliko je primljeni podatak palindrom (rijeÄ koja se Äita isto unazad kao i od naprijed, npr. â€Anaâ€œ, â€kapakâ€œ itd.) - ispiÅ¡e se tekst â€palindromâ€œ. Ukoliko je 
+unesena rijeÄa duÅ¾a od 30 znakova â€“ ispiÅ¡e se tekst â€Ulazna rijeÄ je predugaÄka, maksimalan broj znakova je 30â€œ.
+Cilj zadatka je pokazati na istom primjeru razlike/sliÄnosti izmeÄ‘u funkcije i procedure, te pokazati upotrebu triggera.
+Objekte definirati na slijedeÄ‡i naÄin:
+- funkcija prima karakterni podatak i vraÄ‡a opisan izlaz
+- procedura prima karakterni podatak i ispisuje opisan izlaz (ne vraÄ‡a vrijednost)
+- trigger se definira tako da se izvrÅ¡i umjesto insert naredbe na tablici raÄuni - naopako upiÅ¡e ime kupca pri izvrÅ¡avanju insert naredbe na tablicu (ne provjerava se duÅ¾ina rijeÄi niti da li je rijeÄ palindrom).
 Isprobati rad sva tri objekta.
 
 1. FUNKCIJA
