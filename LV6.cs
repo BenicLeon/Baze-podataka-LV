@@ -20,7 +20,7 @@ namespace Baze_LV6_predlozak
 
         private void btnSve_Click(object sender, EventArgs e)
         {
-            // OVDJE SLIJEDI PRIMJER IZ PREDLOŠKA:
+            // OVDJE SLIJEDI PRIMJER IZ PREDLOÅ KA:
             SqlConnection conn = new SqlConnection("Data Source=161.53.201.59;Initial Catalog=stuslu;User ID=stuslu;Password=stuslu");
 
            conn.Open();
@@ -39,7 +39,7 @@ namespace Baze_LV6_predlozak
 
         private void btnTrazi_Click(object sender, EventArgs e)
         {
-            // OVDJE PISATI KOD 1. ZADATKA IZ PREDLOŠKA:
+            // OVDJE PISATI KOD 1. ZADATKA IZ PREDLOÅ KA:
             SqlConnection conn = new SqlConnection("Data Source=161.53.201.59;Initial Catalog=stuslu;User ID=stuslu;Password=stuslu");
 
             conn.Open();
@@ -47,7 +47,7 @@ namespace Baze_LV6_predlozak
             string spol;
 
             if (rbM.Checked) spol = "M";
-            else spol = "Ž";
+            else spol = "Å½";
 
             string statement = "SELECT * FROM student WHERE ime_stud LIKE '" + txtIme.Text + "%' AND prez_stud LIKE '" + txtPrezime.Text + "%' AND spol='" + spol + "'";
 
