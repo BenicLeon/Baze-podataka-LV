@@ -1,29 +1,29 @@
 Zadatak 1. (baza podataka 'stuslu')
-Ispisati inicijale te godinu roğenja studenata iz tablice 'student'. Ispisati sve studente i njihove podatke te ih posloiti po starosti poèevši od najstarijeg prema najmlağem. 
-Ispisati ime i prezime najstarijeg enskog studenta.
+Ispisati inicijale te godinu roÄ‘enja studenata iz tablice 'student'. Ispisati sve studente i njihove podatke te ih posloÅ¾iti po starosti poÄevÅ¡i od najstarijeg prema najmlaÄ‘em. 
+Ispisati ime i prezime najstarijeg Å¾enskog studenta.
 
 SELECT DISTINCT SUBSTRING (ime_stud, 1,1) + SUBSTRING (prez_stud,1,1) AS inicijali, YEAR(dat_rod) FROM student;
 SELECT * FROM student ORDER BY dat_rod ASC;
-SELECT ime_stud, prez_stud FROM student  WHERE dat_rod=(SELECT MIN(dat_rod) FROM student WHERE spol='');
+SELECT ime_stud, prez_stud FROM student  WHERE dat_rod=(SELECT MIN(dat_rod) FROM student WHERE spol='Å½');
 
 
 Zadatak 2. (baza podataka 'stuslu')
-Ispisati ukupni broj studenata iz tablice student. Ispisati iz koliko razlièitih mjesta dolaze studenti fakulteta. (DISTINCT ne raèuna dva puta isto mjesto. Zato smo trebali staviti kod pbr_preb.)
+Ispisati ukupni broj studenata iz tablice student. Ispisati iz koliko razliÄitih mjesta dolaze studenti fakulteta. (DISTINCT ne raÄuna dva puta isto mjesto. Zato smo trebali staviti kod pbr_preb.)
 
 SELECT COUNT (mbr_stud) FROM stuslu.student;
 SELECT COUNT (distinct pbr_preb) FROM stuslu.student; 
 
 
 Zadatak 3. (baza podataka 'stuslu')
-Ispisati prosjeènu ocjenu svih poloenih predmeta u tablici 'ispit.'
+Ispisati prosjeÄnu ocjenu svih poloÅ¾enih predmeta u tablici 'ispit.'
 
 SELECT AVG(ocjena) AS ocjena FROM ispit WHERE ocjena>1;
 
 
 
 Zadatak 4. (baza podataka 'stuslu')
-Ispisati ime i prezime i prosjeènu ocjenu svih uspješno poloenih ispita za svakog pojedinog studenta, posloeno od najveæe do najmanje prosjeène ocjene. 
-Ispisati matièni broj studenata koji imaju prosjeènu ocjenu poloenih ispita veæu od 2.5
+Ispisati ime i prezime i prosjeÄnu ocjenu svih uspjeÅ¡no poloÅ¾enih ispita za svakog pojedinog studenta, posloÅ¾eno od najveÄ‡e do najmanje prosjeÄne ocjene. 
+Ispisati matiÄni broj studenata koji imaju prosjeÄnu ocjenu poloÅ¾enih ispita veÄ‡u od 2.5
 
 SELECT ime_stud, prez_stud, AVG(ispit.ocjena)
 FROM student, ispit 
@@ -34,7 +34,7 @@ SELECT mbr_stud, AVG(ispit.ocjena) FROM stuslu.ispit WHERE ocjena > 1 GROUP BY m
 
 
 Zadatak 5. (baza podataka 'stuslu')
-Kreirati pogled koji ce imati atribute sliène kao u tablici ispit, ali æe umjesto matiènog broja studenta imati ime i prezime studenta, a umjesto šifre predmeta – naziv predmeta.
+Kreirati pogled koji ce imati atribute sliÄne kao u tablici ispit, ali Ä‡e umjesto matiÄnog broja studenta imati ime i prezime studenta, a umjesto Å¡ifre predmeta â€“ naziv predmeta.
 
 
 CREATE VIEW student1994 AS SELECT ime_stud, prez_stud, naz_pred, mbr_nstvnk, dat_ispit, ispit.ocjena 
